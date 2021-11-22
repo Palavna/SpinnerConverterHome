@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SpinnerHome</string>
+    <string name="save">Выберите величину</string>
+    <string name="v">В</string>
+    <string name="start">start</string>
+
+    <string-array name="magnitude">
+        <item>Тонна</item>
+        <item>Киллограмм</item>
+        <item>Грамм</item>
+        <item>Миллиграмм</item>
+    </string-array>
+
+    <string-array name="magnitudes">
+        <item>Тонна</item>
+        <item>Киллограмм</item>
+        <item>Грамм</item>
+        <item>Миллиграмм</item>
+    </string-array>
+    
+</resources>
