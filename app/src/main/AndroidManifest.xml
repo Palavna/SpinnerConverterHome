@@ -10,13 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpinnerHome">
         <activity
-            android:name=".data.ui.MainActivity"
+            android:name=".data.ui.SecondActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".data.ui.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 
