@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.example.yana.spinnerhome.data.LengthSpinnerEnum
+import com.example.yana.spinnerhome.data.SpinnerEnum
 import com.example.yana.spinnerhome.databinding.ItemSpinnerOneBinding
 import com.example.yana.spinnerhome.databinding.ItemSpinnerTwoBinding
 
-class SpinnerAdapter(context: Context, resId: Int,  val array: Array<SpinnerEnum>):
+class SpinnerAdapter(context: Context, resId: Int, val array: Array<SpinnerEnum>):
     ArrayAdapter<SpinnerEnum>(context, resId, array) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -27,7 +29,7 @@ class SpinnerAdapter(context: Context, resId: Int,  val array: Array<SpinnerEnum
 }
 
 
-class SpinnerAdapterLength(context: Context, resId: Int,  val array: Array<LengthSpinnerEnum>):
+class SpinnerAdapterLength(context: Context, resId: Int, val array: Array<LengthSpinnerEnum>):
     ArrayAdapter<LengthSpinnerEnum>(context, resId, array) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {

@@ -1,4 +1,4 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.data
 
 enum class LengthSpinnerEnum(val valueName: String, val value: Double) {
     MILLIMETR("Миллиметр", 0.01),

@@ -1,4 +1,4 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.data
 
 enum class SpinnerEnum(val valueName: String, val value: Double) {
 

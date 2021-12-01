@@ -1,0 +1,61 @@
+package com.example.yana.spinnerhome.data.ui
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.AdapterView
+import androidx.core.widget.doAfterTextChanged
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import com.example.yana.spinnerhome.R
+import com.example.yana.spinnerhome.data.SpinnerEnum
+import com.example.yana.spinnerhome.data.utils.itemSelected
+import com.example.yana.spinnerhome.databinding.FragmentFirstBinding
+
+class FirstFragment : Fragment(R.layout.fragment_first) {
+
+    private lateinit var binding: FragmentFirstBinding
+    private val viewModel: FirstViewModel by viewModels()
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupListeners()
+
+        viewModel.resultSp.observe(viewLifecycleOwner, {
+            binding.tvResult.text = it
+        })
+
+        val adapter = SpinnerAdapter(requireContext(), R.layout.item_spinner_one, viewModel.array)
+
+        binding.spinnerOne.adapter = adapter
+        binding.spinnerTwo.adapter = adapter
+    }
+
+    fun culc() {
+        val etCulc = binding.edEnter.text.toString()
+        if (etCulc.isNotEmpty()) {
+            val spOneCulc = binding.spinnerOne.selectedItemPosition
+            val spTwoCulc = binding.spinnerTwo.selectedItemPosition
+            viewModel.getResult(etCulc.toDouble(), spOneCulc, spTwoCulc)
+        } else {
+            binding.tvResult.text = ""
+        }
+    }
+
+
+    private fun setupListeners() {
+        binding.edEnter.doAfterTextChanged { culc() }
+        binding.spinnerOne.itemSelected { culc() }
+        binding.spinnerTwo.itemSelected { culc() }
+    }
+}
