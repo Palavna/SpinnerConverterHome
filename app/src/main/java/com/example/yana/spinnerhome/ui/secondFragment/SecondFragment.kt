@@ -1,17 +1,16 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.ui.secondFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.yana.spinnerhome.R
-import com.example.yana.spinnerhome.data.LengthSpinnerEnum
-import com.example.yana.spinnerhome.data.utils.itemSelected
 import com.example.yana.spinnerhome.databinding.FragmentSecondBinding
+import com.example.yana.spinnerhome.ui.SpinnerAdapterLength
+import com.example.yana.spinnerhome.utils.itemSelected
 
 class SecondFragment : Fragment(R.layout.fragment_second) {
 

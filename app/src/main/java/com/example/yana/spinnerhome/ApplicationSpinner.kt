@@ -1,7 +1,7 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome
 
 import android.app.Application
-import com.example.yana.spinnerhome.data.di.saveModules
+import com.example.yana.spinnerhome.di.saveModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

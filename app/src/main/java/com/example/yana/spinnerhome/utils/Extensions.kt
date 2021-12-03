@@ -1,4 +1,4 @@
-package com.example.yana.spinnerhome.data.utils
+package com.example.yana.spinnerhome.utils
 
 import android.view.View
 import android.widget.AdapterView

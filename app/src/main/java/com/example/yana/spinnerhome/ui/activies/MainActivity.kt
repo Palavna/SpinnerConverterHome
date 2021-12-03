@@ -1,14 +1,11 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.ui.activies
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import androidx.activity.viewModels
-import androidx.core.widget.doAfterTextChanged
 import com.example.yana.spinnerhome.R
-import com.example.yana.spinnerhome.data.SpinnerEnum
 import com.example.yana.spinnerhome.databinding.ActivityMainBinding
+import com.example.yana.spinnerhome.ui.firstFragment.FirstFragment
+import com.example.yana.spinnerhome.ui.secondFragment.SecondFragment
 
 class MainActivity : AppCompatActivity() {
 

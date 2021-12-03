@@ -9,8 +9,8 @@
         android:id="@+id/spTvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#4F6A6A"
-        android:textSize="18sp"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_16sp"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

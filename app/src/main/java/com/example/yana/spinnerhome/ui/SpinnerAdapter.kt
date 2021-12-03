@@ -1,4 +1,4 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.ui
 
 import android.content.Context
 import android.view.LayoutInflater

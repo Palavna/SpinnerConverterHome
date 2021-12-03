@@ -1,4 +1,4 @@
-package com.example.yana.spinnerhome.data.ui
+package com.example.yana.spinnerhome.ui.secondFragment
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

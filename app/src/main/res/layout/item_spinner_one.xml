@@ -9,8 +9,8 @@
         android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#48615E"
-        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:textSize="@dimen/_16sp"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
