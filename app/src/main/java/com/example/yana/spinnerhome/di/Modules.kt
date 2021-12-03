@@ -1,5 +1,7 @@
 package com.example.yana.spinnerhome.di
 
+import com.example.yana.spinnerhome.data.remote.CurrenciesInteractor
+import com.example.yana.spinnerhome.data.remote.CurrenciesInteractorImpl
 import com.example.yana.spinnerhome.data.remote.CurrenciesRetrofit
 import com.example.yana.spinnerhome.ui.currencies.CurrenciesFragment
 import com.example.yana.spinnerhome.ui.currencies.CurrenciesViewModel
@@ -11,7 +13,7 @@ import org.koin.dsl.module
 
 val saveModules by lazy {
     loadKoinModules(
-        listOf(viewModelModuleInfo, networkModule)
+        listOf(viewModelModuleInfo, networkModule, interactorModule)
     )
 }
 
@@ -21,9 +23,13 @@ val networkModule = module {
     }
 }
 
+val interactorModule = module {
+    single<CurrenciesInteractor> { CurrenciesInteractorImpl(get()) }
+}
+
 val viewModelModuleInfo = module {
     viewModel { FirstViewModel() }
     viewModel { SecondViewModel() }
-    viewModel { CurrenciesViewModel() }
+    viewModel { CurrenciesViewModel(get()) }
 
 }

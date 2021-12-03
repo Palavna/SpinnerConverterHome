@@ -15,11 +15,8 @@ class FirstViewModel : ViewModel() {
         SpinnerEnum.STON,
         SpinnerEnum.UNCIYA
     )
-
-
     val data = arrayListOf<String>()
     val resultSp = MutableLiveData<String>()
-
 
     fun getResult(value: Double, first: Int, second: Int) {
         val result = (array[first].value / array[second].value) * value

@@ -6,29 +6,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import com.example.yana.spinnerhome.R
-import com.example.yana.spinnerhome.databinding.FragmentFirstBinding
-import com.example.yana.spinnerhome.ui.SpinnerAdapter
-import com.example.yana.spinnerhome.ui.firstFragment.FirstViewModel
+import com.example.yana.spinnerhome.databinding.FragmentCurrenciesBinding
 import com.example.yana.spinnerhome.utils.itemSelected
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CurrenciesFragment : Fragment(R.layout.fragment_first) {
+class CurrenciesFragment : Fragment(R.layout.fragment_currencies) {
 
-    private lateinit var binding: FragmentFirstBinding
-    private val viewModel: CurrenciesViewModel by viewModels()
+    private lateinit var binding: FragmentCurrenciesBinding
+    private val viewModel by viewModel<CurrenciesViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentFirstBinding.inflate(inflater, container, false)
+        binding = FragmentCurrenciesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.loadCurrencies()
 //        setupListeners()
 //
 //        viewModel.resultSp.observe(viewLifecycleOwner, {

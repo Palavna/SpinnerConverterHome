@@ -28,7 +28,6 @@ class SpinnerAdapter(context: Context, resId: Int, val array: Array<SpinnerEnum>
     }
 }
 
-
 class SpinnerAdapterLength(context: Context, resId: Int, val array: Array<LengthSpinnerEnum>):
     ArrayAdapter<LengthSpinnerEnum>(context, resId, array) {
 
