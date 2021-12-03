@@ -2,8 +2,10 @@ package com.example.yana.spinnerhome.ui.activies
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.example.yana.spinnerhome.R
 import com.example.yana.spinnerhome.databinding.ActivityMainBinding
+import com.example.yana.spinnerhome.ui.currencies.CurrenciesFragment
 import com.example.yana.spinnerhome.ui.firstFragment.FirstFragment
 import com.example.yana.spinnerhome.ui.secondFragment.SecondFragment
 
@@ -16,26 +18,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupFrameLayot()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.containerFragment, FirstFragment())
-            .commit()
+        changeFragment(FirstFragment())
     }
 
     private fun setupFrameLayot() {
         binding.bottomNav.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.balance->{
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.containerFragment, FirstFragment())
-                        .commit()
-                }
-                R.id.length->{
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.containerFragment, SecondFragment())
-                        .commit()
-                }
+                R.id.balance-> changeFragment(FirstFragment())
+                R.id.length-> changeFragment(SecondFragment())
+                R.id.currencies-> changeFragment(CurrenciesFragment())
             }
             true
         }
+    }
+    private fun changeFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.containerFragment, fragment)
+            .commit()
     }
 }

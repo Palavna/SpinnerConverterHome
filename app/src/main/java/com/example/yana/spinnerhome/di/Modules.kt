@@ -1,6 +1,8 @@
 package com.example.yana.spinnerhome.di
 
 import com.example.yana.spinnerhome.data.remote.CurrenciesRetrofit
+import com.example.yana.spinnerhome.ui.currencies.CurrenciesFragment
+import com.example.yana.spinnerhome.ui.currencies.CurrenciesViewModel
 import com.example.yana.spinnerhome.ui.firstFragment.FirstViewModel
 import com.example.yana.spinnerhome.ui.secondFragment.SecondViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -22,5 +24,6 @@ val networkModule = module {
 val viewModelModuleInfo = module {
     viewModel { FirstViewModel() }
     viewModel { SecondViewModel() }
+    viewModel { CurrenciesViewModel() }
 
 }

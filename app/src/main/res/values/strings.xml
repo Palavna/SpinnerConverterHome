@@ -5,6 +5,8 @@
     <string name="start">start</string>
     <string name="balance">Масса</string>
     <string name="length">Длина</string>
+    <string name="currencies">Валюта</string>
+    <string name="currencies_save">Выберите валюту</string>
 
     <!--    <string-array name="magnitude">-->
     <!--        <item>Тонна</item>-->
